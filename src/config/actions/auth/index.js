@@ -1,0 +1,156 @@
+const auth = {
+  REGISTER_USER_REQUEST: "REGISTER_USER_REQUEST",
+  REGISTER_USER_SUCCESS: "REGISTER_USER_SUCCESS",
+  REGISTER_USER_ERROR: "REGISTER_USER_ERROR",
+
+  UPDATE_STATE_USER_REQUEST: "UPDATE_STATE_USER_REQUEST",
+  UPDATE_STATE_USER_SUCCESS: "UPDATE_STATE_USER_SUCCESS",
+  UPDATE_STATE_USER_ERROR: "UPDATE_STATE_USER_ERROR",
+
+  LOGIN_APPLICANT_REQUEST: "LOGIN_APPLICANT_REQUEST",
+  LOGIN_APPLICANT_SUCCESS: "LOGIN_APPLICANT_SUCCESS",
+  LOGIN_APPLICANT_ERROR: "LOGIN_APPLICANT_ERROR",
+
+  LOGOUT_SUCCESS: "LOGOUT_SUCCESS",
+  LOGOUT_REQUEST: "LOGOUT_REQUEST",
+  LOGOUT_ERROR: "LOGOUT_ERROR",
+
+  CHANGE_PASSWORD_SUCCESS: "CHANGE_PASSWORD_SUCCESS",
+  CHANGE_PASSWORD_REQUEST: "CHANGE_PASSWORD_REQUEST",
+  CHANGE_PASSWORD_ERROR: "CHANGE_PASSWORD_ERROR",
+
+  CHANGE_DEFAULT_PASSWORD_SUCCESS: "CHANGE_DEFAULT_PASSWORD_SUCCESS",
+  CHANGE_DEFAULT_PASSWORD_REQUEST: "CHANGE_DEFAULT_PASSWORD_REQUEST",
+  CHANGE_DEFAULT_PASSWORD_ERROR: "CHANGE_DEFAULT_PASSWORD_ERROR",
+
+  REQUEST_TOKEN_SUCCESS: "REQUEST_TOKEN_SUCCESS",
+  REQUEST_TOKEN_REQUEST: "REQUEST_TOKEN_REQUEST",
+  REQUEST_TOKEN_ERROR: "REQUEST_TOKEN_ERROR",
+
+  RESET_PASSWORD_SUCCESS: "RESET_PASSWORD_SUCCESS",
+  RESET_PASSWORD_REQUEST: "RESET_PASSWORD_REQUEST",
+  RESET_PASSWORD_ERROR: "RESET_PASSWORD_ERROR",
+
+  EMAIL_VERIFICATION_LINK_SUCCESS: "EMAIL_VERIFICATION_LINK_SUCCESS",
+  EMAIL_VERIFICATION_LINK_REQUEST: "EMAIL_VERIFICATION_LINK_REQUEST",
+  EMAIL_VERIFICATION_LINK_ERROR: "EMAIL_VERIFICATION_LINK_ERROR",
+
+  VERIFY_EMAIL_SUCCESS: "VERIFY_EMAIL_SUCCESS",
+  VERIFY_EMAIL_REQUEST: "VERIFY_EMAIL_REQUEST",
+  VERIFY_EMAIL_ERROR: "VERIFY_EMAIL_ERROR",
+
+  GET_AUTH_USER_SUCCESS: "GET_AUTH_USER_SUCCESS",
+  GET_AUTH_USER_REQUEST: "GET_AUTH_USER_REQUEST",
+  GET_AUTH_USER_ERROR: "GET_AUTH_USER_ERROR",
+
+  SET_USER_CURRENT_ROLE: "SET_USER_CURRENT_ROLE",
+  SET_USER_CURRENT_INST: "SET_USER_CURRENT_INST",
+  SET_USER_CURRENT_TYPE: "SET_USER_CURRENT_TYPE",
+  SET_USER_CURRENT_INST_TYPE: "SET_USER_CURRENT_INST_TYPE",
+  SET_USER_ROLES: "SET_USER_ROLES",
+  SET_USER_INSTS: "SET_USER_INSTS",
+  SET_AUTH_USER: "SET_AUTH_USER",
+  SET_IS_AUTHENTICATED: "SET_IS_AUTHENTICATED",
+  REMOVE_AUTH_USER: "REMOVE_AUTH_USER",
+
+  registerUser: (data) => ({
+    type: auth.REGISTER_USER_REQUEST,
+    data,
+  }),
+
+  updateStateUser: (data, userId, authUserId) => ({
+    type: auth.UPDATE_STATE_USER_REQUEST,
+    authUserId,
+    userId,
+    data,
+  }),
+
+  loginApplicant: (data) => ({
+    type: auth.LOGIN_APPLICANT_REQUEST,
+    data,
+  }),
+
+  changePassword: (data) => ({
+    type: auth.CHANGE_PASSWORD_REQUEST,
+    data,
+  }),
+
+  changeDefaultPassword: (data) => ({
+    type: auth.CHANGE_DEFAULT_PASSWORD_REQUEST,
+    data,
+  }),
+
+  requestToken: (data) => ({
+    type: auth.REQUEST_TOKEN_REQUEST,
+    data,
+  }),
+
+  resetPassword: (data) => ({
+    type: auth.RESET_PASSWORD_REQUEST,
+    data,
+  }),
+
+  getAuthUser: () => ({
+    type: auth.GET_AUTH_USER_REQUEST,
+  }),
+
+  logoutUser: () => ({
+    type: auth.LOGOUT_REQUEST,
+  }),
+
+  requestEmailVerificationLink: (data) => ({
+    type: auth.EMAIL_VERIFICATION_LINK_REQUEST,
+    data,
+  }),
+
+  verifyEmail: (token) => ({
+    type: auth.VERIFY_EMAIL_REQUEST,
+    token,
+  }),
+
+  setAuthUser: (user) => ({
+    type: auth.SET_AUTH_USER,
+    user,
+  }),
+
+  setUserRoles: (roles) => ({
+    type: auth.SET_USER_ROLES,
+    roles,
+  }),
+
+  setUserInsts: (insts) => ({
+    type: auth.SET_USER_INSTS,
+    insts,
+  }),
+
+  setCurrentRole: (role) => ({
+    type: auth.SET_USER_CURRENT_ROLE,
+    role,
+  }),
+
+  setCurrentInst: (inst) => ({
+    type: auth.SET_USER_CURRENT_INST,
+    inst,
+  }),
+
+  setCurrentType: (payload) => ({
+    type: auth.SET_USER_CURRENT_TYPE,
+    payload,
+  }),
+
+  setCurrentInstType: (payload) => ({
+    type: auth.SET_USER_CURRENT_INST_TYPE,
+    payload,
+  }),
+
+  setIsAuthenticated: (payload) => ({
+    type: auth.SET_IS_AUTHENTICATED,
+    payload,
+  }),
+
+  removeAuthUser: () => ({
+    type: auth.REMOVE_AUTH_USER,
+  }),
+};
+
+export default auth;

@@ -1,0 +1,17 @@
+services:
+  wa-app-ui:
+    image: aaronk01/welfare-app-ui:v1.0.0
+    networks: 
+      - wa-app-tier
+    deploy:
+      mode: replicated
+      replicas: 1
+      #volumes:
+      #- type: bind
+      #  source: /var/www/terp-assets
+      #  target: /var/www/terp-assets
+    ports:
+      - "3035:3035"
+networks:
+  wa-app-tier: {}
+

@@ -1,0 +1,18 @@
+##Gitlab CI YML file
+#
+#
+image: docker:docker@sha256:c8bb6fa5388b56304dd770c4bc0478de81ce18540173b1a589178c0d31bfce90
+
+services:
+  - docker:dind@sha256:c8bb6fa5388b56304dd770c4bc0478de81ce18540173b1a589178c0d31bfce90
+
+stages:
+  - build
+
+docker_build:
+  stage: build
+  script:
+    - docker build -t aaronk01/welfare-app-ui:v1.0.0 .
+    - docker login -u $DOCKER_REGISTRY_USER -p $DOCKER_REGISTRY_PASSWORD
+    - docker push aaronk01/welfare-app-ui:v1.0.0
+

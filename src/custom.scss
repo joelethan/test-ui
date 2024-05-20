@@ -1,0 +1,31 @@
+$danger: #b94239;
+$primary: #7e7e10;
+$dark: #2c3a47;
+$info: #227093;
+$upload_info: #e1ecf1;
+$warning: #f5cd79;
+$gray: #dfe6e9;
+$success: #218c74;
+$white: #fff;
+$light: #edf2f7;
+
+$theme-colors: (
+  "danger": $danger,
+  "primary": $primary,
+  "dark": $dark,
+  "info": $info,
+  "upload_info": $upload_info,
+  "warning": $warning,
+  "gray": $gray,
+  "success": $success,
+  "white": $white,
+  "light": $light,
+);
+
+$enable-caret: true;
+$enable-rounded: false;
+$spacer: 0.8rem;
+
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+// @import "~antd/dist/antd.css";

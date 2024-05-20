@@ -1,0 +1,51 @@
+module.exports = {
+  root: true,
+  extends: [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:prettier/recommended",
+  ],
+  plugins: ["prettier"],
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
+    ecmaFeatures: {
+      jsx: true,
+      defaultParams: true,
+    },
+  },
+  rules: {
+    "react/jsx-filename-extension": [
+      1,
+      { extensions: [".js", ".jsx", ".json"] },
+    ],
+    "react/jsx-props-no-spreading": ["error", { custom: "ignore" }],
+    "object-curly-newline": ["off", { multiline: true }],
+    "react-hooks/exhaustive-deps": 0,
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-curly-newline": "off",
+    "react/destructuring-assignment": "off",
+    "no-param-reassign": [2, { props: false }],
+    "prettier/prettier": ["off", { singleQuote: true }],
+    "function-paren-newline": "off",
+    "no-console": "warn",
+    "no-undef": "warn",
+    "react/display-name": "error",
+    "react/prop-types": "error",
+    "arrow-body-style": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "default-param-last": 0,
+  },
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true,
+  },
+};
